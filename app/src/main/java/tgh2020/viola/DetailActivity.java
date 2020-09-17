@@ -20,11 +20,14 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        Memory memory=new Memory(Memory.GREEN,"a",null,"q");
+
+        Memory memory= null;
         Intent intent = getIntent();
 
         if (intent != null) {
             memory = (Memory) intent.getSerializableExtra("memory");
+        } else {
+            memory=new Memory(Memory.GREEN,"a",null,"q");
         }
 
         ImageView imageView = findViewById(R.id.image);

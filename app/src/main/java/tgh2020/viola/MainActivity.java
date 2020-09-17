@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // TODO: とりあえず保存されている記憶の小瓶の中からランダムに表示
                 if (Memory.getMemories().isEmpty()) {
                     Toast.makeText(MainActivity.this, "記憶の小瓶が空っぽです", Toast.LENGTH_LONG).show();
                     return;

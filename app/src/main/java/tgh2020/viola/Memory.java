@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Memory implements Serializable {
+    private static final long serialVersionUID = -2338626292552177485L;
+
     public static final int GREEN = 0;
     public static final int PINK = 1;
     public static final int YELLOW = 2;
@@ -30,16 +32,6 @@ public class Memory implements Serializable {
         this.title = title;
         this.imageUri = imageUri;
         this.text = text;
-    }
-
-    private void writeObject(ObjectOutputStream oos) throws IOException {
-        oos.defaultWriteObject();
-        oos.writeUTF(imageUri.toString());
-    }
-    private void readObject(ObjectInputStream ois) throws IOException,
-            ClassNotFoundException {
-        ois.defaultReadObject();
-        imageUri = Uri.parse(ois.readUTF());
     }
 
     public static void addMemory(Memory memory) {
@@ -68,5 +60,16 @@ public class Memory implements Serializable {
 
     public String getText() {
         return text;
+    }
+
+    private void writeObject(ObjectOutputStream oos) throws IOException {
+        oos.defaultWriteObject();
+        oos.writeUTF(imageUri.toString());
+    }
+
+    private void readObject(ObjectInputStream ois) throws IOException,
+            ClassNotFoundException {
+        ois.defaultReadObject();
+        imageUri = Uri.parse(ois.readUTF());
     }
 }
