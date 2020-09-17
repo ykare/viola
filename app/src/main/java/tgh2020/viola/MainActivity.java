@@ -30,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button koba = findViewById(R.id.btnKoba);
+        koba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, KobaActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

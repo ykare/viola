@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".DetailActivity"></activity>
         <activity android:name=".InputActivity" />
+        <activity android:name=".KobaActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,5 +20,7 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
 
 </manifest>
