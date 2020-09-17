@@ -9,7 +9,7 @@ import java.util.List;
 public class Memory {
     public static final int GREEN = 0;
     public static final int PINK = 1;
-    public static final int YELOW = 3;
+    public static final int YELLOW = 2;
 
     private LocalDateTime timestamp;
 
