@@ -2,6 +2,7 @@ package tgh2020.viola;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +21,11 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         Memory memory=new Memory(Memory.GREEN,"a",null,"q");
+        Intent intent = getIntent();
 
+        if (intent != null) {
+            memory = (Memory) intent.getSerializableExtra("memory");
+        }
 
         ImageView imageView = findViewById(R.id.image);
         imageView.setImageURI(memory.getImageUri());
