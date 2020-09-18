@@ -23,6 +23,8 @@ public class Memory implements Serializable {
     private String title;
     private transient Uri imageUri;
     private String text;
+    private int column;
+    private int row;
 
     private static List<Memory> memories = new ArrayList<>();
 

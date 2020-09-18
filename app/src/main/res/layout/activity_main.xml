@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -10,31 +11,32 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
-        android:text="もちもちの木"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="もちもちの木" />
+
+    <ImageView
+        android:id="@+id/imageOfTree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/tree" />
 
     <Button
         android:id="@+id/btnInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="296dp"
-        android:text="入力画面へ"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:layout_alignBottom="@id/imageOfTree"
+        android:layout_marginBottom="20dp"
+        android:text="入力" />
 
     <Button
         android:id="@+id/btnDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="詳細画面へ"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnInput" />
+        android:layout_alignRight="@id/imageOfTree"
+        android:layout_alignBottom="@id/imageOfTree"
+        android:layout_marginBottom="20dp"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="詳細" />
+
+</RelativeLayout>
