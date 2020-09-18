@@ -18,7 +18,7 @@ import java.io.FileDescriptor;
 import java.io.IOException;
 import java.util.Random;
 
-public class InputActivity extends AppCompatActivity {
+public class InputActivity extends BaseActivity {
     private static final int RESULT_PICK_IMAGEFILE = 1000;
     private ImageView imageView;
 

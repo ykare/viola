@@ -15,7 +15,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
-public class DetailActivity extends AppCompatActivity{
+public class DetailActivity extends BaseActivity {
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +80,4 @@ public class DetailActivity extends AppCompatActivity{
 
 
     }
-
-
 }
