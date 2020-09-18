@@ -7,4 +7,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal">#FAF8F8</item>
+        <item name="android:textColor">#FAF8F8</item>
+    </style>
 </resources>
