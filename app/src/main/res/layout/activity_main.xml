@@ -5,21 +5,8 @@
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/yozora"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="もちもちの木" />
-
-    <ImageView
-        android:id="@+id/imageOfTree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/tree" />
 
     <Button
         android:id="@+id/btnInput"
@@ -29,5 +16,19 @@
         android:layout_marginBottom="20dp"
         android:text="+"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
+
+    <ImageView
+        android:id="@+id/imageOfTree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/whitetree" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="もちもちの木" />
 
 </RelativeLayout>
