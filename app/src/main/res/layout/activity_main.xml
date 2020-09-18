@@ -29,14 +29,4 @@
         android:layout_marginBottom="20dp"
         android:text="入力" />
 
-    <Button
-        android:id="@+id/btnDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@id/imageOfTree"
-        android:layout_alignBottom="@id/imageOfTree"
-        android:layout_marginBottom="20dp"
-
-        android:text="詳細" />
-
 </RelativeLayout>
