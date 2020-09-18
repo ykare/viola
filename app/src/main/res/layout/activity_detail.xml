@@ -5,13 +5,13 @@
     android:id="@+id/linearLayout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#FFFFFF"
-    android:backgroundTint="#4F4160"
+    android:background="@drawable/backg"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".DetailActivity">
 
     <LinearLayout
+        android:id="@+id/bubble"
         android:layout_width="420dp"
         android:layout_height="420dp"
         android:background="@drawable/image"
