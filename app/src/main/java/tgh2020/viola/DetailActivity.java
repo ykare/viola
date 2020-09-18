@@ -14,10 +14,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.time.format.DateTimeFormatter;
+
 
 public class DetailActivity extends BaseActivity {
 
-
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
 
     @Override
@@ -67,7 +69,7 @@ public class DetailActivity extends BaseActivity {
 
 
         TextView date = findViewById(R.id.textView8);
-        date.setText(" Date: "+memory.getTimestamp());
+        date.setText(" Date: "+memory.getTimestamp().format(FORMATTER));
 
         Button b = findViewById(R.id.button);
         b.setOnClickListener(new View.OnClickListener() {
