@@ -36,7 +36,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="title"
-                    android:textColor="#FAF8F8" />
+                    android:textColor="#FAF8F8"
+                    android:typeface="serif" />
 
                 <EditText
                     android:id="@+id/etTitle"
@@ -45,6 +46,7 @@
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:textColor="#FAF8F8"
+                    android:typeface="serif"
                     app:theme="@style/EditTextStyle" />
 
                 <TextView
@@ -52,7 +54,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="本文"
-                    android:textColor="#FAF8F8" />
+                    android:textColor="#FAF8F8"
+                    android:typeface="serif" />
 
                 <EditText
                     android:id="@+id/etText"
@@ -61,6 +64,7 @@
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:textColor="#FAF8F8"
+                    android:typeface="serif"
                     app:theme="@style/EditTextStyle" />
 
                 <Button
