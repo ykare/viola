@@ -73,14 +73,16 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="#BE93E3"
                     android:gravity="center"
-                    android:text="画像選択" />
+                    android:text="画像選択"
+                    android:typeface="serif" />
 
                 <Button
                     android:id="@+id/donebutton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#E0B3E8"
-                    android:text="保存" />
+                    android:text="保存"
+                    android:typeface="serif" />
 
                 <ImageView
                     android:id="@+id/imageView"
