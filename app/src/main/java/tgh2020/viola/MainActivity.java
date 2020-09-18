@@ -50,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Memory.addMemory(new Memory(Memory.GREEN, "MochiMochi", null, "Welcome!"));
-        Memory.addMemory(new Memory(Memory.GREEN, "Mochi", null, "Hello"));
-        Memory.addMemory(new Memory(Memory.YELLOW, "Mochi", null, "Welcome!"));
-        Memory.addMemory(new Memory(Memory.GREEN, "MochiMochi", null, "Welcome!"));
-        Memory.addMemory(new Memory(Memory.YELLOW, "MochiMochi", null, "Welcome!"));
-        Memory.addMemory(new Memory(Memory.PINK, "MochiMochi", null, "Welcome!"));
-        Memory.addMemory(new Memory(Memory.PINK, "MochiMochi", null, "Welcome!"));
+//        Memory.addMemory(new Memory(Memory.GREEN, "MochiMochi", null, "Welcome!"));
+//        Memory.addMemory(new Memory(Memory.GREEN, "Mochi", null, "Hello"));
+//        Memory.addMemory(new Memory(Memory.YELLOW, "Mochi", null, "Welcome!"));
+//        Memory.addMemory(new Memory(Memory.GREEN, "MochiMochi", null, "Welcome!"));
+//        Memory.addMemory(new Memory(Memory.YELLOW, "MochiMochi", null, "Welcome!"));
+//        Memory.addMemory(new Memory(Memory.PINK, "MochiMochi", null, "Welcome!"));
+
 
         // 問題：　以下のスニペットの中から反復するパターンを見出し、
         // Memoryオブジェクトのコレクションに対するループ式として成り立つようにリファクタリングしてください。
@@ -65,13 +65,13 @@ public class MainActivity extends AppCompatActivity {
         // Memoryクラスはjava.io.Serializableインタフェースを実装するよう修正する必要があります。
         RelativeLayout mainLayout = findViewById(R.id.mainLayout);
 
-        int leftMarginArray[] = {120,200,250,400,500,600,700};
-        int topMarginArray[] = {700,500,800,400,700,750,800};
+        int leftMarginArray[] = {120,200,250,400,500,600,700,800,850,900,300,400,200,600,700};
+        int topMarginArray[] = {700,500,800,400,700,750,800,900,600,1000,500,600,900,400,250};
         int i = 0;
 
         for(Memory value : Memory.getMemories())
         {
-            if (i >= 7) {
+            if (i >= 14) {
                 break;
             }
 
@@ -80,13 +80,13 @@ public class MainActivity extends AppCompatActivity {
             ball0.setImageResource(R.drawable.ball);
             value.getColor();
             if (value.getColor() == Memory.GREEN) {
-                ball0.setColorFilter(Color.parseColor("#bceb34"));
+                ball0.setColorFilter(Color.parseColor("#46eb34"));
             }
             else if (value.getColor() == Memory.PINK) {
                 ball0.setColorFilter(Color.parseColor("#eb34ba"));
             }
             else {
-                ball0.setColorFilter(Color.parseColor("#ebd534"));
+                ball0.setColorFilter(Color.parseColor("#ebc934"));
             }
 
             params.leftMargin = leftMarginArray[i];
@@ -97,9 +97,16 @@ public class MainActivity extends AppCompatActivity {
 
             ball0.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
+                public void onClick(View view) {
+                    // TODO: とりあえず保存されている記憶の小瓶の中からランダムに表示
+                    if (Memory.getMemories().isEmpty()) {
+                        Toast.makeText(MainActivity.this, "記憶の小瓶が空っぽです", Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    int size = Memory.getMemories().size();
+                    Memory memory = Memory.getMemories().get(new Random().nextInt(size));
                     Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-                    intent.putExtra("memory", 0);
+                    intent.putExtra("memory", memory);
                     startActivity(intent);
                 }
             });
