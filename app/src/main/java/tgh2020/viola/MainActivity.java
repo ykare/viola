@@ -20,7 +20,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private List<ImageView> imageViews = new ArrayList<>();
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             params.leftMargin = leftMarginArray[i];
-            params.topMargin = topMarginArray[i];
+            params.topMargin = topMarginArray[i] + 100;
             mainLayout.addView(ball0, params);
 
             i = i + 1;

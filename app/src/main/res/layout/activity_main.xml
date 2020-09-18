@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/imageOfTree"
         android:layout_marginBottom="20dp"
-        android:text="入力" />
+        android:text="+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
 
 </RelativeLayout>
